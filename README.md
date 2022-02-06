@@ -12,3 +12,4 @@ In order for this to occur, a listener design pattern has been implemented, wher
 and the bricks calculate for collisions by prompting the ball, and if detected, send the ball bouncing in the correct direction.
 The animation is created by a GUI library, displaying the ball and brick in each frame.
 I hope you enjoyed, feel free to play!
+Please view MP4 file above "Arkanoid.mp4" for quck preview of game. 
