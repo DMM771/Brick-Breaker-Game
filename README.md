@@ -11,5 +11,6 @@ In addition, the object that has been hit must delete itself if it is a brick.
 In order for this to occur, a listener design pattern has been implemented, where the ball must notify the bricks of its location at all times,
 and the bricks calculate for collisions by prompting the ball, and if detected, send the ball bouncing in the correct direction.
 The animation is created by a GUI library, displaying the ball and brick in each frame.
-I hope you enjoyed, feel free to play!
-Please view MP4 file above "Arkanoid.mp4" for quck preview of game. 
+
+Please view MP4 file above "Arkanoid.mp4" for quck preview of game (after clicking on the MP4 file, please click "view raw", as video is to large to play on github preview),
+and of course, feel free to use scource code, and play the game!
