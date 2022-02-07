@@ -4,7 +4,7 @@ This game is written in JAVA.
 
 The code demonstrates the fundementals of OOP and makes heavy use of the Observer design pattern.
 Objects in this code include: the bricks, the balls, the levels, and the background.
-In addition to the trivial objects stated above, deeper objects exist such as Collidable objects, points, lines and animations exist too.
+In addition to the trivial objects stated above, deeper objects exist such as Collidable objects, points, lines and animations aswell.
 
 The physics in this game rely on vectors and and mathmatical calculations.
 For example, for each frame in the animation loop, every ball has a current position and a trajectory (posstion in next frame),
