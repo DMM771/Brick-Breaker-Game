@@ -45,7 +45,8 @@ the algorithm checks several next steps ahaed of the frame, and check if any of 
 only if no problems where found, the new direction will be set, otherwise, a different direction will be set.
 
 This was a very fun project, I hope you enjoy too.
+By, David Monheit.
 
 
-Please view MP4 file above "Arkanoid.mp4" for quck preview of game (after clicking on the MP4 file, please click "view raw", as video is to large to play on github preview),
-and of course, feel free to use scource code, and play the game!
+*****Please view MP4 file above "Arkanoid.mp4" for quck preview of game (after clicking on the MP4 file, please click "view raw", as video is to large to play on github preview),
+and of course, feel free to use scource code, and play the game!*****
