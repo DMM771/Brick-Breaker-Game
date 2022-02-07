@@ -22,22 +22,30 @@ Thats quite alot to do at once, and can get a little messy, both from a coding p
 Therefore, listener design pattern has been implemented.
 
 Berfore we get into how the listener pattern has been implemented, it is important to note
-that because we are using a GUI platform in the project, many objects are Sprites (animations that appear on the screen),
+that because I am using a GUI platform in this project, many objects are Sprites (animations that appear on the screen),
 and therefore must all update there "animation state" for every frame.
-This fact is another reason the listener pattern was chosen.
-
+This is another reason the listener pattern was chosen.
 
 The implementation logic is as follows.
 Every object that implements the "Sprite" object, is a listener, and will get notified every time a new frame is called.
 Each sprite has its own implementaion of the "timePassed()" method, that gets called for every frame.
 The notifer is the level, and will itterate through its list of sprites and call their "timePassed()" method.
 Using this logic, I then was able to solve the collision problem in a more efficiant manner as well.
-When the ball gets notified, it will run through its logic for the frame, and if a collision has been detected,
-the object that was hit will recieve the collision information, and set the balls new direction accordingly.
+When the ball gets notified and call the timePassed() method, it will run through its logic for the frame, and if a collision has been detected,
+the object that was hit will send the collision information back to the ball (rather than the ball making this calculation),
+and the balls new direction will be updated accordingly.
 Now the ball will bounce in the correct direction depending on the object that has been hit.
 
 
-A 
+An intresting bug I had to solve was, what happens if a ball hits a "corner area" such as a top corner of the screen, or between two blocks?
+The new trajectory will be the "after bounce" position, but what if the new position is inside another block? an udefined position.
+this will cause the ball to be stuck inside a block or outside the screen.
+I solved this problem by using an algorithm that will run prior to setting the new trajectory.
+the algorithm checks several next steps ahaed of the frame, and check if any of the next Steps are in a location that is not allowed.
+only if no problems where found, the new direction will be set, otherwise, a different direction will be set.
+
+This was a very fun project, I hope you enjoy too.
+
 
 Please view MP4 file above "Arkanoid.mp4" for quck preview of game (after clicking on the MP4 file, please click "view raw", as video is to large to play on github preview),
 and of course, feel free to use scource code, and play the game!
