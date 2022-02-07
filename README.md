@@ -21,7 +21,22 @@ In addition, the object that has been hit must delete itself if it is a brick.
 Thats quite alot to do at once, and can get a little messy, both from a coding perspective, and from a logical perspective.
 Therefore, listener design pattern has been implemented.
 
-The implemantation works as follows.
+Berfore we get into how the listener pattern has been implemented, it is important to note
+that because we are using a GUI platform in the project, many objects are Sprites (animations that appear on the screen),
+and therefore must all update there "animation state" for every frame.
+This fact is another reason the listener pattern was chosen.
+
+
+The implementation logic is as follows.
+Every object that implements the "Sprite" object, is a listener, and will get notified every time a new frame is called.
+Each sprite has its own implementaion of the "timePassed()" method, that gets called for every frame.
+The notifer is the level, and will itterate through its list of sprites and call their "timePassed()" method.
+Using this logic, I then was able to solve the collision problem in a more efficiant manner as well.
+When the ball gets notified, it will run through its logic for the frame, and if a collision has been detected,
+the object that was hit will recieve the collision information, and set the balls new direction accordingly.
+Now the ball will bounce in the correct direction depending on the object that has been hit.
+
+
 where the ball must notify the bricks of its location at all times,
 and the bricks calculate for collisions by prompting the ball, and if detected, send the ball bouncing in the correct direction.
 The animation is created by a GUI library, displaying the ball and brick in each frame.
