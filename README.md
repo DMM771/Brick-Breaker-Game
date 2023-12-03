@@ -1,5 +1,5 @@
 <h1>Brick Breaker Game</h1>
-<h2><a href="https://youtu.be/S6cT876_QmA">Click here for a video demonstration of the Brick Breaker Game</a></h2>
+<h2><a href="https://youtu.be/S6cT876_QmA">Click here for a video demonstration of the Game</a></h2>
 
 <h2>Description</h2>
 <p>The Brick Breaker Game is a dynamic and engaging JAVA-based game that demonstrates the fundamentals of Object-Oriented Programming (OOP) and makes heavy use of the Observer design pattern, along with mechanics physics. The game features various interactive objects like bricks, balls, and levels, each designed with deeper underlying objects such as level objects, background objects, Collidable objects, points, lines, and animations.</p>
